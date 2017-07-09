@@ -1,0 +1,65 @@
+﻿Delegates
+==============
+Delegate is a type safe function pointer
+Types in c# : Class, Interface ,Sturcture ,Delegate
+
+Also , delegate is a reference type similar to that of class
+
+Delegates are defined under namespace coz types are logical unit similar
+to that of class
+BUT
+We can also define delegate inside class ie : it will be treated as a nested type ,
+but its not advisable
+
+Basically , a delegate holds the reference of a method 
+and then call the method for execution
+
+So, Mainly there are 2 ways to call a method :
+1. By intance of a class
+2. If the method is static then using the class name
+
+There is also a 3 way of calling a method 
+and that is through delegate
+
+To Call a method through a delegate we have following ways
+
+1.Define a delegate
+<modifier> delegate <return type> <Name of delegated>(<Parameter List>);
+
+Public delegate int AddDelgate (int no1, int no2);
+
+2. Create Instance of delegate and Point to a function
+
+3.Invoking/Calling the delegate and by passing the required arguments
+
+Types of delegates
+=====================
+1.SingleCast Delegate =>Points to a single method
+2.MultiCast Delegate => It can points multiple method But we should have same no. of	
+						arguments and return types for all the delegates
+
+Note : We should try to have void as a return type for delegate otherwise it can have consiconses
+
+
+Anonymous Method =>2.0
+======================
+Basically anonymous methods returns a delegate and its a method withod a name , and instead of binding Name of a Method to a delegate
+we can bind a code block to a delegate
+Benefit of using it helps us in writing less code and its suggested to use it only when we have less code and not in big functions
+
+Scenarios for using it
+
+Lambada Expressions =>3.0
+====================
+Its a short hand for wirting lambada expression
+
+
+Predifined Generic Delegate
+=============================
+.NET also provide us with predifined Generic delegates 
+its helpful in scenarios where we dont need to create a delegate explicity 
+and we can use predefined delegates
+
+1. Func =>Takes generic type input parameter(max 16) and returns generic type return type
+2. Action => Takes generic type input parameter(max 16) and returns only void
+3. Predicate => Takes generic type input parameter(only 1) and returns only bool
